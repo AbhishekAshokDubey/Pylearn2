@@ -1,3 +1,9 @@
+# if we have saved the CSV or any other file as .pkl file, we can directly use it as below.
+
+# to convert a CSV file to .pkl file we use readCSVforPylearn.py script from
+# makeDataSet.py script given at
+# https://github.com/AbhishekAshokDubey/Pylearn2/blob/master/make%20PKL%20dataset/makeDataSet.py
+
 #
 # Ref: http://nbviewer.ipython.org/github/lisa-lab/pylearn2/blob/master/pylearn2/scripts/tutorials/softmax_regression/softmax_regression.ipynb
 #
