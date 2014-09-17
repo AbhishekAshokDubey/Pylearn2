@@ -1,4 +1,7 @@
 # pylearn2 tutorial example: make_dataset.py by Ian Goodfellow
+
+##########################################################################################################################
+
 # See README before reading this file
 #
 #
@@ -23,8 +26,8 @@ if __name__ == "__main__":
     
     validate = readCSVforPylearn.CSVDataset(path = 'train.csv', start = 50000, stop = 60000, one_hot = True, expect_headers = True)
     validate_pkl_path = os.path.join('.', 'MNIST_validate.pkl')
-    serial.save(validate_pkl_path, train)
+    serial.save(validate_pkl_path, validate)
 
     test = readCSVforPylearn.CSVDataset(path = 'test.csv', one_hot = True, expect_headers = True, expect_labels = False)
     test_pkl_path = os.path.join('.', 'MNIST_test.pkl')    
-    serial.save(test_pkl_path, train)
+    serial.save(test_pkl_path, test)
