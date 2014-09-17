@@ -1,3 +1,17 @@
+# When we have data in CSV format we can use the readCSVforPylearn.py file. Which contains CSVDataset class.
+
+# for the readCSVforPylearn.py file check
+# https://github.com/AbhishekAshokDubey/Pylearn2/tree/master/make%20PKL%20dataset
+
+# this (readCSVforPylearn.py) does the preprocessing of the CSV file to be used for training.
+# it can be used after preprocessing or even saved for future uses.
+
+# to save the preprocessed files using readCSVforPylearn.py, we can use
+# makeDataSet.py script given at
+# https://github.com/AbhishekAshokDubey/Pylearn2/blob/master/make%20PKL%20dataset/makeDataSet.py
+
+
+
 !obj:pylearn2.train.Train {
     dataset: &train !obj:readCSVforPylearn.CSVDataset {
         path : 'train.csv',
