@@ -1,3 +1,23 @@
+# Assuming your pylearn is installed in ABC folder.
+
+# YAML like below assumes you have saved the data in required format in the PYLEARN2_DATA_PATH ( check with "${PYLEARN2_DATA_PATH}") folder.
+# YAML below points to the mnist.py (containing MNIST class) script in ABC/pylearn2/datasets folder.
+# You must read the mnist.py file as it shows you where it expects the data and what else is required.
+# rest all code is just the initiallization of the parameters
+
+# ALL the problems are trained by the Train class in ABC/pylearn2/train.py script.
+# and then we call
+# >> train.py ourYAMLfile.yaml
+
+# "train" (object, &train) points to the dataset initiallized by
+#    dataset: &train !obj:pylearn2.datasets.mnist.MNIST {
+#        which_set: 'train',
+#        one_hot: 1,
+#        start: 0,
+#        stop: 50000
+
+# All mostly the data will be in CSV format, read "forCSVfiles.yaml" yaml file
+
 !obj:pylearn2.train.Train {
     dataset: &train !obj:pylearn2.datasets.mnist.MNIST {
         which_set: 'train',
